@@ -3,63 +3,108 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Solicitar exclusão de conta e dados — AI Talk</title>
+  <title>Excluir conta e dados — Global Buddy IA (IcepowerBR)</title>
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width:800px; margin:40px auto; padding:0 16px; color:#111 }
-    header{border-bottom:1px solid #eee;padding-bottom:12px;margin-bottom:18px}
-    h1{font-size:1.6rem;margin:0}
-    p{line-height:1.5}
-    form{margin-top:18px}
-    label{display:block;margin:8px 0 4px;font-weight:600}
-    input, textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px}
-    button{margin-top:12px;padding:10px 14px;background:#0b63d6;color:#fff;border:none;border-radius:6px}
-    footer{margin-top:28px;font-size:0.9rem;color:#444}
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; max-width:900px; margin:40px auto; padding:0 18px; color:#111; line-height:1.45 }
+    header{border-bottom:1px solid #eee;padding-bottom:14px;margin-bottom:20px}
+    h1{font-size:1.45rem;margin:0}
+    h2{font-size:1.05rem;margin-top:20px}
+    p{margin:0.6rem 0}
+    ol{margin:0.6rem 0 0.6rem 1.2rem}
+    code{background:#f3f3f3;padding:2px 6px;border-radius:4px}
+    a.button{display:inline-block;margin-top:12px;padding:10px 14px;background:#0b63d6;color:#fff;text-decoration:none;border-radius:6px}
+    .muted{color:#555;font-size:0.95rem}
+    footer{margin-top:28px;font-size:0.9rem;color:#444;border-top:1px solid #eee;padding-top:16px}
+    .box{background:#fafafa;border:1px solid #eee;padding:12px;border-radius:8px}
+    ul{margin:0.4rem 0 0.6rem 1.2rem}
   </style>
+  <script>
+    // abre cliente de e-mail com assunto e corpo padrão
+    function openEmail() {
+      var subject = encodeURIComponent("Solicitação de exclusão de conta/dados — Global Buddy IA");
+      var body = encodeURIComponent(
+        "Por favor, informe:\\n\\n" +
+        "- Tipo de solicitação: (ex.: excluir conta / excluir apenas dados)\\n" +
+        "- E-mail da conta ou ID de usuário: \\n" +
+        "- Captura(s) de tela (se aplicável): \\n" +
+        "- Observação (opcional): \\n\\n" +
+        "Confirmo que sou o titular da conta ou tenho autorização para solicitar a exclusão."
+      );
+      window.location.href = "mailto:elderpv18@gmail.com?subject=" + subject + "&body=" + body;
+    }
+  </script>
 </head>
 <body>
   <header>
-    <h1>Solicitar exclusão da sua conta e dos dados associados</h1>
-    <p>Se você deseja que apaguemos permanentemente sua conta e quaisquer dados pessoais que mantenhamos sobre você, use o formulário abaixo ou envie um pedido para o e‑mail de suporte indicado. Responderemos e confirmaremos a exclusão dentro do prazo descrito abaixo.</p>
+    <h1>Excluir conta e/ou dados — Global Buddy IA</h1>
+    <p class="muted">Esta página é mantida por <strong>IcepowerBR</strong>, desenvolvedor do app <strong>Global Buddy IA</strong>. Use as instruções abaixo para solicitar a exclusão da sua conta e/ou dos seus dados pessoais.</p>
   </header>
 
   <section>
-    <h2>Como solicitar a exclusão</h2>
+    <h2>Resumo — o que você pode solicitar aqui</h2>
+    <p>Esta página permite que usuários solicitem:</p>
+    <ul>
+      <li>Exclusão da <strong>conta</strong> (remover login e dados associados à conta).</li>
+      <li>Exclusão de <strong>dados pessoais</strong> coletados pelo app (mesmo se você não tiver conta, usando um identificador como e-mail ou ID).</li>
+    </ul>
+    <p class="muted">A página é pública e acessível sem login. O método preferido é por e-mail (descrito abaixo).</p>
+  </section>
+
+  <section>
+    <h2>Como solicitar (modo preferencial)</h2>
     <ol>
-      <li>Preencha o formulário abaixo com o e‑mail ou ID de usuário associado à sua conta.</li>
-      <li>Verificaremos a propriedade da conta (podemos pedir que você confirme via e‑mail da conta ou por confirmação no app).</li>
-      <li>Uma vez verificada, excluiremos sua conta e os dados pessoais associados e enviaremos um e‑mail de confirmação.</li>
+      <li>Envie um e-mail para <strong>elderpv18@gmail.com</strong> com o assunto <code>Solicitação de exclusão de conta/dados — Global Buddy IA</code>.</li>
+      <li>No corpo do e-mail, indique:</li>
+      <ul>
+        <li><strong>Tipo de solicitação:</strong> excluir conta / excluir apenas dados;</li>
+        <li><strong>E-mail da conta</strong> ou <strong>ID de usuário</strong> (obrigatório);</li>
+        <li>Captura(s) de tela ou outra evidência que ajude na verificação (opcional).</li>
+      </ul>
+      <li>Se disponível no app, você também pode excluir a conta em: Global Buddy IA → <strong>Configurações</strong> → <strong>Conta</strong> → <strong>Excluir minha conta</strong>. Após usar a opção no app, envie um e-mail confirmando a ação.</li>
     </ol>
   </section>
 
-  <form action="mailto:elderpv18@gmail.com" method="post" enctype="text/plain">
-    <label for="userId">E‑mail da conta ou ID de usuário</label>
-    <input id="userId" name="userId" placeholder="nome@exemplo.com ou seu ID de usuário" required />
-
-    <label for="reason">Opcional: Motivo da exclusão</label>
-    <textarea id="reason" name="reason" rows="4" placeholder="Opcional — nos ajuda a melhorar"></textarea>
-
-    <p style="font-size:0.95rem;color:#444;margin-top:8px">Observação: Este formulário abrirá seu cliente de e‑mail padrão. Se isso não funcionar, envie um e‑mail para o endereço de suporte abaixo com os mesmos dados.</p>
-
-    <button type="submit">Enviar solicitação de exclusão por e‑mail</button>
-  </form>
+  <section style="margin-top:12px">
+    <h2>Botão rápido (abre seu cliente de e-mail)</h2>
+    <div class="box">
+      <p class="muted">Clique para abrir seu cliente de e-mail com assunto e corpo já preenchidos; revise e envie.</p>
+      <a href="javascript:void(0)" class="button" onclick="openEmail()">Enviar solicitação por e-mail</a>
+      <p class="muted" style="margin-top:8px">Se o link não abrir, envie manualmente para <strong>elderpv18@gmail.com</strong> com o assunto acima.</p>
+    </div>
+  </section>
 
   <section style="margin-top:18px">
-    <h2>E‑mail de suporte</h2>
-    <p>Envie solicitações para: <strong>elderpv18@gmail.com</strong></p>
+    <h2>Exclusão de dados sem conta</h2>
+    <p>Se você não possui conta, mas acredita que temos dados pessoais vinculados a você, envie um e-mail para <strong>elderpv18@gmail.com</strong> indicando o identificador disponível (por exemplo, e-mail usado em formulários, número de telefone ou outro ID). Explicaremos os passos necessários para verificação antes de processar a exclusão.</p>
   </section>
 
   <section style="margin-top:18px">
     <h2>O que será excluído</h2>
-    <p>Removeremos informações do perfil pessoal, histórico de chats, e outros dados vinculados à conta sempre que possível. Podemos reter registros de analytics anonimizados ou agregados. Quaisquer exceções legais ou de segurança serão informadas na nossa resposta.</p>
+    <p>Excluiremos, sempre que tecnicamente possível:</p>
+    <ul>
+      <li>Dados de perfil (nome, e-mail, foto, etc.) vinculados à conta.</li>
+      <li>Histórico de chats e conteúdo gerado salvo na sua conta.</li>
+      <li>Dados vinculados exclusivamente à sua conta (configurações, preferências).</li>
+    </ul>
+    <p class="muted">Podemos manter dados anonimizados ou agregados para analytics e melhoria do serviço. Qualquer retenção necessária por obrigação legal será informada na resposta.</p>
   </section>
 
   <section style="margin-top:18px">
     <h2>Prazo</h2>
-    <p>Prazo típico de resposta e confirmação de exclusão: até 30 dias. Se a exclusão depender de ações de terceiros (por exemplo, remoção em provedores externos), notificaremos você e informaremos os prazos previstos.</p>
+    <p>Confirmaremos o recebimento da solicitação em até <strong>7 dias úteis</strong> e concluiremos a exclusão em até <strong>30 dias</strong>, salvo necessidade de verificação adicional ou ações de terceiros. Informaremos prazos estimados caso haja dependências externas.</p>
+  </section>
+
+  <section style="margin-top:18px">
+    <h2>Contato e referência</h2>
+    <p>Desenvolvedor: <strong>IcepowerBR</strong></p>
+    <p>Suporte: <strong>elderpv18@gmail.com</strong></p>
+    <p class="muted">Privacy Policy: <a href="https://seudominio.com/privacy-policy" target="_blank" rel="noopener">https://seudominio.com/privacy-policy</a> <!-- substitua pelo URL real --> </p>
+    <p class="muted">Esta página refere-se ao app <strong>Global Buddy IA</strong> publicado por <strong>IcepowerBR</strong> no Google Play.</p>
   </section>
 
   <footer>
-    <p>Ao enviar uma solicitação de exclusão, você confirma que é o titular da conta ou que tem permissão do titular para agir.</p>
+    <p>Ao enviar a solicitação, você confirma que é o titular da conta ou tem autorização para solicitá-la em nome do titular.</p>
+    <p class="muted" style="margin-top:8px">Última atualização: <strong>27 de outubro de 2025</strong></p>
   </footer>
 </body>
 </html>
