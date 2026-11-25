@@ -13,8 +13,22 @@
     .meta { color: #444; font-size: .95rem }
     footer { margin-top: 32px; font-size: .9rem; color: #444; border-top: 1px solid #eee; padding-top: 12px }
   </style>
+  <style>
+    .lang-switch { text-align: right; font-size: .95rem; margin-bottom: 12px }
+    .lang-switch a, .lang-switch strong { margin-left: 10px }
+  </style>
+  <script>
+    (function () {
+      try {
+        if (new URLSearchParams(location.search).get('lang') === 'pt') return;
+        var lang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        if (!/^pt/i.test(lang)) location.replace('/AI_talk_mobile_public/en/delete-account');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+  <nav class="lang-switch" aria-label="Language"><strong>Português</strong><a href="/AI_talk_mobile_public/en/delete-account" hreflang="en" lang="en">English</a></nav>
   <header>
     <h1>Excluir conta e dados — Global Buddy: Conversação IA</h1>
     <p class="meta">Desenvolvedor (Google Play): IcepowerBR &nbsp;|&nbsp; Última atualização: 25 de novembro de 2026</p>
@@ -58,7 +72,7 @@
   <p>Para pedidos por e-mail, confirmamos o recebimento em até 7 dias úteis e concluímos a exclusão em até 30 dias após confirmar que a conta é sua. Avisaremos por e-mail quando terminar.</p>
 
   <footer>
-    <p>Mais detalhes na nossa <a href="https://elderhorta.github.io/AI_talk_mobile_public/">Política de Privacidade</a>. Ao enviar o pedido, você confirma que é o titular da conta ou tem autorização do titular.</p>
+    <p>Mais detalhes na nossa <a href="https://elderhorta.github.io/AI_talk_mobile_public/?lang=pt">Política de Privacidade</a>. Ao enviar o pedido, você confirma que é o titular da conta ou tem autorização do titular.</p>
     <p>IcepowerBR — desenvolvedor do app Global Buddy: Conversação IA no Google Play (com.elderhorta.aitalkmobile). Contato: <a href="mailto:elderpv18@gmail.com">elderpv18@gmail.com</a>.</p>
   </footer>
 </body>

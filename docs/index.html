@@ -15,8 +15,22 @@
     .meta { color: #444; font-size: .95rem }
     footer { margin-top: 32px; font-size: .9rem; color: #444; border-top: 1px solid #eee; padding-top: 12px }
   </style>
+  <style>
+    .lang-switch { text-align: right; font-size: .95rem; margin-bottom: 12px }
+    .lang-switch a, .lang-switch strong { margin-left: 10px }
+  </style>
+  <script>
+    (function () {
+      try {
+        if (new URLSearchParams(location.search).get('lang') === 'pt') return;
+        var lang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+        if (!/^pt/i.test(lang)) location.replace('/AI_talk_mobile_public/en/privacy-policy');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+  <nav class="lang-switch" aria-label="Language"><strong>Português</strong><a href="/AI_talk_mobile_public/en/privacy-policy" hreflang="en" lang="en">English</a></nav>
   <header>
     <h1>Política de Privacidade — Global Buddy: Conversação IA</h1>
     <p class="meta">Desenvolvedor (Google Play): IcepowerBR &nbsp;|&nbsp; Contato: <a href="mailto:elderpv18@gmail.com">elderpv18@gmail.com</a> &nbsp;|&nbsp; Última atualização: 25 de novembro de 2026</p>
@@ -87,7 +101,7 @@
 
   <h2>8. Seus direitos</h2>
   <p>Pela LGPD (art. 18), você pode pedir: confirmação e acesso aos seus dados, correção, anonimização ou eliminação, portabilidade, informação sobre compartilhamentos, revogação do consentimento e revisão de decisões automatizadas. Envie seu pedido para <a href="mailto:elderpv18@gmail.com">elderpv18@gmail.com</a>. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
-  <p>Para excluir sua conta, use <em>Config → Conta → Excluir conta</em> no app ou veja a página <a href="https://elderhorta.github.io/AI_talk_mobile_public/delete-account">Excluir conta e dados</a>.</p>
+  <p>Para excluir sua conta, use <em>Config → Conta → Excluir conta</em> no app ou veja a página <a href="https://elderhorta.github.io/AI_talk_mobile_public/delete-account?lang=pt">Excluir conta e dados</a>.</p>
 
   <h2>9. Menores de idade</h2>
   <p>O app é destinado a pessoas a partir de 16 anos e não é direcionado a crianças. No primeiro acesso perguntamos seu ano de nascimento e, quando o Google Play fornece um sinal de idade, também o usamos. Menores de 16 anos não podem usar o app. Para usuários de 16 e 17 anos, não enviamos eventos do app nem o ID de publicidade à Meta, informamos ao Google AdMob que são menores de idade e negamos sinais de publicidade no Firebase. Não coletamos intencionalmente dados de menores de 13 anos. Usuários de 16 e 17 anos devem usar o app com o conhecimento dos pais ou responsáveis. Se você acredita que uma criança nos enviou dados, escreva para <a href="mailto:elderpv18@gmail.com">elderpv18@gmail.com</a> e os excluiremos.</p>
